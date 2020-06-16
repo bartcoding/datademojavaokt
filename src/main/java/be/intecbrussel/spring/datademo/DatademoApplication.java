@@ -11,8 +11,8 @@ public class DatademoApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext context =
                 SpringApplication.run(DatademoApplication.class, args);
-        BeerDao beerDao = context.getBean(BeerDao.class);
-        beerDao.setStock(468, 199);
+        BeerDao beerDao = context.getBean("beerDaoJpaImpl",BeerDao.class);
+
         String result = beerDao.getBeerById(468);
         System.out.println(result);
 

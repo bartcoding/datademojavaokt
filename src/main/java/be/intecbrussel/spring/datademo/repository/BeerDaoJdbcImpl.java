@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Map;
 
 @Repository
-public class BeerDaoImpl implements BeerDao{
+public class BeerDaoJdbcImpl implements BeerDao{
     private final static String getBeerByIdQuery = "SELECT Name, Alcohol, Price, Stock FROM beers WHERE Id = ?";
     private final static String updateBeerQuery = "UPDATE Beers SET Stock = ? WHERE Id = ?";
 
